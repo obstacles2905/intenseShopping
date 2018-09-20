@@ -1,0 +1,146 @@
+{ 
+    "_id" : ObjectId("5b67d98d60e61e23b79a2344"), 
+    "id" : "1", 
+    "name" : "asus zenbook ux331un", 
+    "model" : "ux331un", 
+    "year" : 2017.0, 
+    "collection" : "zenbook", 
+    "company" : "asus", 
+    "price" : 999.0, 
+    "body" : {
+        "length" : 300.0, 
+        "widht" : 200.0, 
+        "height" : 15.0
+    }, 
+    "screen" : {
+        "brightness" : 8.0, 
+        "picture_quality" : 8.0
+    }, 
+    "coating" : {
+        "front" : "gloss", 
+        "back" : "matte", 
+        "screen" : "matte", 
+        "keyboard" : "matte"
+    }, 
+    "cpu" : {
+        "name" : "intel core i5-8250u", 
+        "generation" : 8.0, 
+        "cores_number" : 4.0, 
+        "frequency" : {
+            "from" : 1.6, 
+            "to" : 3.4
+        }
+    }, 
+    "ram" : {
+        "size" : 8.0, 
+        "type" : "lpddr3", 
+        "additional" : 0.0
+    }, 
+    "ssd" : 1.0, 
+    "ssd_size" : 256.0, 
+    "videocard" : {
+        "label" : "nvidia geforce", 
+        "model" : "mx150", 
+        "size" : 2.0, 
+        "type" : "integrated", 
+        "generation" : "gddr5"
+    }, 
+    "optical_drive" : 0.0, 
+    "color" : "blue", 
+    "wifi" : "802.11ac", 
+    "bluetooth" : "4.2", 
+    "bluetooth_type" : "dual band", 
+    "webcam" : {
+        "type" : "vga", 
+        "pixels" : 3.2
+    }, 
+    "oc" : "windows 10", 
+    "weight" : 1.12, 
+    "keyboard_backlight" : 1.0, 
+    "battery" : {
+        "daily" : 10.0, 
+        "office" : 7.0, 
+        "gaming" : 4.0, 
+        "programming" : 6.0, 
+        "video_processing" : 5.0, 
+        "sleep" : 20.0
+    }, 
+    "battery_removal" : 0.0, 
+    "dynamics" : 1.0, 
+    "microphone" : 1.0, 
+    "audiosystem" : "harmon karbon", 
+    "fingerprint_reader" : 1.0, 
+    "ports" : {
+        "usb2" : 0.0, 
+        "usb3" : 2.0, 
+        "typec" : 1.0, 
+        "hdmi" : 1.0, 
+        "thunderbolt" : 0.0, 
+        "audio" : 1.0, 
+        "microsd" : 1.0, 
+        "ethernet" : 0.0, 
+        "vga" : 0.0
+    }, 
+    "equipment" : [
+        "notebook", 
+        "power adapter", 
+        "usb 3.0 rj-45 adapter", 
+        "case", 
+        "documentation", 
+        "warranty talon"
+    ], 
+    "type" : "ultrabook", 
+    "gaming" : {
+        "benchmark" : "8600", 
+        "dota2" : {
+            "ultra_low" : {
+                "from" : 120.0, 
+                "to" : 130.0
+            }, 
+            "low" : {
+                "from" : 100.0, 
+                "to" : 120.0
+            }, 
+            "medium" : {
+                "from" : 80.0, 
+                "to" : 95.0
+            }, 
+            "high" : {
+                "from" : 60.0, 
+                "to" : 75.0
+            }, 
+            "ultra_high" : {
+                "from" : 45.0, 
+                "to" : 59.0
+            }
+        }
+    }, 
+    "build_quality" : 8.0, 
+    "company_quality" : 8.0, 
+    "portability" : 8.0, 
+    "sound" : {
+        "quality" : 8.0, 
+        "level" : 8.0, 
+        "microphone" : 7.0
+    }, 
+    "temperature" : {
+        "daily" : 2.0, 
+        "office" : 4.0, 
+        "gaming" : 9.0, 
+        "programming" : 3.0, 
+        "video_processing" : 7.0, 
+        "charge" : 5.0
+    }, 
+    "keyboard" : 9.0, 
+    "touchpad" : 8.0, 
+    "relevance" : {
+        "daily" : 9.0, 
+        "office" : 9.0, 
+        "gaming" : 3.0
+    }, 
+    "care" : 5.0, 
+    "conditioning" : 6.0, 
+    "underwater_rocks" : [
+
+    ]
+}

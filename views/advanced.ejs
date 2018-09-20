@@ -12,36 +12,14 @@
 
         <div class="questions">
             <form action="#">
+                <% for(let i=0; i<filters.length; i++) {%>
                 <p>
                     <label>
-                        <input name="cpu" type="radio" checked />
-                        <span>1</span>
+                        <input name="<%= filters.name%>" value="<%= filters.name%>" type="radio" checked />
+                        <span></span>
                     </label>
                 </p>
-                <p>
-                    <label>
-                        <input name="cpu" type="radio" />
-                        <span>2</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input name="cpu" type="radio"  />
-                        <span>3</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input name="cpu" type="radio" />
-                        <span>4</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input name="cpu" type="radio" />
-                        <span>5</span>
-                    </label>
-                </p>
+                <% } %>
             </form>
 
         </div>

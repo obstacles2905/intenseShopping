@@ -1,0 +1,66 @@
+{ 
+    "cpu" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "ram" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "videocard" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "ssd" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "portability" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "weight" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "webcam" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "optical_drive" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "screen" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "battery" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "sound" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "battery_removal" : {
+        "simple" : 0.0, 
+        "advanced" : 1.0
+    }, 
+    "thunderbolt" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "fingerprint" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "price" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }, 
+    "company" : {
+        "simple" : 1.0, 
+        "advanced" : 1.0
+    }
+}

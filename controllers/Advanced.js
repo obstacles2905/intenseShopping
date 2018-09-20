@@ -1,16 +1,14 @@
 "use strict";
 
-const Mongo = require("./Mongo");
+const Mysql = require("../db/Mysql");
 
-class Advanced extends Mongo {
+class Advanced extends Mysql {
 
   async index(request, response) {
 
-    const filters = await this._getFilters("advanced");
-    response.render("advanced");
+    const filters = await this._getAdvancedFilters();
+    response.render("advanced", {filters});
   }
-
-
 
 }
 
