@@ -8,22 +8,53 @@
             <a href="simple" class="waves-effect waves-light btn" id="simple_search" >Для повседневной работы</a>
             <a href="simple" class="waves-effect waves-light btn" id="simple_search" >Ультрабук</a>
             <a href="simple" class="waves-effect waves-light btn" id="simple_search" >Нетбук</a>
-        </div>
 
-        <div class="questions">
-            <form action="#">
-                <% for(let i=0; i<filters.length; i++) {%>
-                <p>
-                    <label>
-                        <input name="<%= filters.name%>" value="<%= filters.name%>" type="radio" checked />
-                        <span></span>
-                    </label>
-                </p>
-                <% } %>
-            </form>
+            <div id="filters">
+                <form method="post" action="/result">
+                    <% for(let filter=0; filter<filters.length; filter++) {%>
+                        <p1><b><%= filters[filter].name %></b></p1>
+                        <p>
+                            <label>
+                                <input class="with-gap" value="1" name="<%= filters[filter].name%>" type="radio" />
+                                <span>1</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" value="2" name="<%= filters[filter].name%>" type="radio"  />
+                                <span>2</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" value="3" name="<%= filters[filter].name%>" type="radio"  />
+                                <span>3</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" value="4" name="<%= filters[filter].name%>" type="radio" />
+                                <span>4</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" value="5" name="<%= filters[filter].name%>" type="radio" />
+                                <span>5</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" value="0" name="<%= filters[filter].name%>" type="radio"  />
+                                <span>Don't care</span>
+                            </label>
+                        </p>
 
+                    <% } %>
+                    <input type="submit" class="waves-effect waves-light btn-large" value="Submit">
+                </form>
+            </div>
         </div>
     </div>
 </div>
-
 <%- include('./footer.ejs', {title: "Login page"}) %>
