@@ -1,0 +1,20 @@
+<%- include('./header.ejs', {title: "Login page"}) %>
+
+<div class="container">
+    <div class="row">
+        <div class="col s9 m9 l9">
+            <h3>Выберите категорию</h3>
+            <a href="simple" class="waves-effect waves-light btn" id="simple_search" >Игровой</a>
+            <a href="simple" class="waves-effect waves-light btn" id="simple_search" >Для повседневной работы</a>
+            <a href="simple" class="waves-effect waves-light btn" id="simple_search" >Ультрабук</a>
+            <a href="simple" class="waves-effect waves-light btn" id="simple_search" >Нетбук</a>
+
+            <div id="filters">
+                <form method="post" action="/result">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('./footer.ejs', {title: "Login page"}) %>

@@ -4,7 +4,7 @@ const Mysql = require("../db/Mysql");
 
 class Advanced extends Mysql {
 
-  async index(request, response) {
+  async renderPage(request, response) {
 
     const filters = await this._getAdvancedFilters();
     response.render("advanced", {filters});

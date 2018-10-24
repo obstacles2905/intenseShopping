@@ -7,6 +7,7 @@ const mongo = require("mongodb").MongoClient;
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
+const categoryRouter = require("./routes/category");
 const simpleSearchRouter = require("./routes/simple");
 const advancedSearchRouter = require("./routes/advanced");
 const resultRouter = require("./routes/result");
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 //app.use("/simple", simpleSearchRouter);
+app.use("/category", categoryRouter);
 app.use("/advanced", advancedSearchRouter);
 app.use("/result", resultRouter);
 // catch 404 and forward to error handler
