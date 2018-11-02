@@ -1,4 +1,41 @@
 <%- include('./header.ejs', {title: "Login page"}) %>
+<style>
+
+    #detailedInfo > div {
+        height: 75vh;
+    }
+
+    #basicAnchor {
+        position: relative;
+        background-image:
+            url("https://lh3.googleusercontent.com/rascVIUb1KGac8xOudHyUV_oO_1LACokEMlIzFkv1bzikYYarcu4P9BA2xki8bYfCJ39QTQ-0O0a37CotaqQ6uk=s1500");
+    }
+
+    #basicInfo {
+        background-color: black;
+        opacity: 0.8;
+        height: 60vh;
+        width: 100vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #basicInfo > div {
+        font-family: sans-serif;
+        margin: 5%;
+    }
+
+    #basicIntroText {
+        color: whitesmoke;
+    }
+
+    #basicMostRated {
+        background-color: whitesmoke;
+    }
+
+</style>
 
     <div class="row">
 
@@ -8,7 +45,7 @@
             <!--<a href="simple" class="waves-effect waves-light btn" id="simple_search" >Ультрабук</a>-->
             <!--<a href="simple" class="waves-effect waves-light btn" id="simple_search" >Нетбук</a>-->
         <div class="col s12 m12 l12">
-            <a href="#notebookBasicAnchor" onclick="smoothAnchor">
+            <a id="notebookBasic" href="#basicAnchor" onclick="smoothScroll()">
                 <div class="card col s3 m3 l3">
                     <div class="card-image">
                         <img src="https://materializecss.com/images/sample-1.jpg">
@@ -17,26 +54,32 @@
                 </div>
             </a>
 
-            <div class="card col s3 m3 l3">
-                <div class="card-image" style="width: 100%; height: 100%">
-                    <img src="https://materializecss.com/images/sample-1.jpg">
-                    <span class="card-title">Для офисной работы</span>
+            <a id="notebookOffice" href="#officeDetailedInfo" onclick="smoothScroll()">
+                <div class="card col s3 m3 l3">
+                    <div class="card-image">
+                        <img src="https://materializecss.com/images/sample-1.jpg">
+                        <span class="card-title">Офисная Работа</span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card col s3 m3 l3">
-                <div class="card-image" style="width: 100%; height: 100%">
-                    <img src="https://materializecss.com/images/sample-1.jpg">
-                    <span class="card-title">Программирование/Видеомонтаж</span>
+            <a id="notebookBasic" href="#advancedWorkDetailedInfo" onclick="smoothScroll()">
+                <div class="card col s3 m3 l3">
+                    <div class="card-image">
+                        <img src="https://materializecss.com/images/sample-1.jpg">
+                        <span class="card-title">Программирование и Видеомонтаж</span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card col s3 m3 l3">
-                <div class="card-image" style="width: 100%; height: 100%">
-                    <img src="https://materializecss.com/images/sample-1.jpg">
-                    <span class="card-title">Игровые</span>
+            <a id="notebookBasic" href="#gamingDetailedInfo" onclick="smoothScroll()">
+                <div class="card col s3 m3 l3">
+                    <div class="card-image">
+                        <img src="https://materializecss.com/images/sample-1.jpg">
+                        <span class="card-title">Геймерские</span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
             <div id="filters">
                 <form method="post" action="/result">
@@ -44,28 +87,51 @@
                 </form>
             </div>
 
-            <div id="notebookBasicAnchor" style="height:2000px">
+            <div class="col s12 m12 l12" id="detailedInfo" style="height: 70%">
+
+                <div id="basicAnchor">
+                    <div id="basicInfo">
+                        <div id="basicIntroText">
+                            <h6>В данном разделе представлены ноутбуки, по большей части, базовой комплектации.
+                                Такие модели идеальны для простых операций, таких как сёрфинг в интернете,
+                                просмотр Ютуба и прочих видеоматериалов. Также модели данной категории могут быть использованы
+                                для простой офисной работы, базового программирования и запуска игр десятилетней давности</h6>
+                        </div>
+                        <div id="basicMostRated">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="officeDetailedInfo">
+
+                </div>
+
+                <div id="advancedWorkDetailedInfo">
+
+                </div>
+
+                <div id="gamingDetailedInfo">
+
+                </div>
 
             </div>
-
 
         </div>
     </div>
 
 <script>
-    function smoothAnchor(element) {
-      const elementId = "#notebookBasicAnchor";
-      $(elementId).on("click", (event) => {
+    function smoothScroll() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
 
-        event.preventDefault();
-
-        const id = $(this).attr("href");
-
-        const top = $(id).offset().top;
-
-        $("category.ejs").animate({scrollTop: top}, 13500);
-
-      })
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
     }
 </script>
+
 <%- include('./footer.ejs', {title: "Login page"}) %>
